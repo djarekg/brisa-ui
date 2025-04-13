@@ -1,0 +1,36 @@
+{
+  "name": "@bui/workspace",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Dustin Griffith",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djarekg/brisa-ui"
+  },
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "bun@1.2.9",
+  "engines": {
+    "bun": ">=1.2.9"
+  },
+  "scripts": {
+    "clean": "bunx rimraf -g bun.lock **/node_modules **/dist",
+    "presetup": "bun run clean",
+    "setup": "bun install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.0-beta.1",
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "brisa": "^0.2.10"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
